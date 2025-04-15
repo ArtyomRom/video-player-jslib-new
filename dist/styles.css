@@ -1,0 +1,45 @@
+#player {
+      width: 800px;
+      height: 600px;
+      box-shadow: 0 0 20px rgba(0, 0, 0, 0.8);
+      background-color: black;
+      position: relative;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    .js-video-container {
+      flex-grow: 1;
+      display: block;
+      align-items: center;
+      justify-content: center;
+      background-color: black;
+      position: relative;
+    }
+    .top-panel {
+      height: 5%; /* пропорция от общего height */
+      background-color: black;
+    }
+
+    .controls {
+      height: 10%; /* пропорционально высоте плеера */
+      background: black;
+      display: flex;
+      align-items: center;
+      justify-content: left;
+      gap: 15px;
+    }
+
+    .controls button {
+      font-size: 1.0em; /* масштабируется от базового размера */
+      background: transparent;
+      border: none;
+      color: white;
+      cursor: pointer;
+      font-family: sans-serif;
+      font-size: x-large;
+    }
+    .spacer {
+      margin-left: auto;
