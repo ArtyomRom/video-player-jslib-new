@@ -94,3 +94,6 @@ JS код поставляется в виде одного файла `player.j
   <div class="js-progress-slider" style="background-color: red;">Прогресс</div>
 </div>
 ```
+## Демо проект
+[Ссылка](https://artyomrom.github.io/video-player-jslib-new/dist/) на демо проекта
+![img.png](img.png)
