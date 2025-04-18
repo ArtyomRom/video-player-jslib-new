@@ -1,92 +1,100 @@
-    .vp-player {
-      width: 794px;
-      height: 601px;
-      box-shadow: 0 0 20px rgba(0, 0, 0, 0.8);
-      background-color: black;
-      position: relative;
-      overflow: hidden;
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
-    }
+.vp-player {
+  width: 794px;
+  height: 601px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.8);
+  background-color: black;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
 
-    .vp-display {
-      flex-grow: 1;
-    }
+.vp-display {
+  flex-grow: 1;
+}
 
-    .vp-controls {
-      background: black;
-      display: flex;
-      align-items: center;
-      gap: 1px;
-    }
+.vp-controls {
+  background: black;
+  display: flex;
+  align-items: center;
+  gap: 1px;
+}
 
-    .vp-button {
-      font-size: 20px;
-      background: transparent;
-      border: none;
-      color: white;
-      cursor: pointer;
-      font-family: sans-serif;
-      width: 36px;
-      height: 41px;
+.vp-button {
+  font-size: 20px;
+  background: transparent;
+  border: none;
+  color: white;
+  cursor: pointer;
+  font-family: sans-serif;
+  width: 36px;
+  height: 41px;
 
-    }
-    .vp-fullscreen {
-      font-size: 20px; /* масштабируется от базового размера */
-      background: transparent;
-      border: none;
-      color: white;
-      cursor: pointer;
-      font-family: sans-serif;
-      width: 35px;
-      height: 44px;
-    }
-    .spacer {
-      margin-left: auto;
-    }
+}
 
-    .player_time {
-      color: white;
-      font-family: 'Roboto', sans-serif;
-      font-weight: 400;
-    }
-    .progress_container {
-      height: 4px;
-      width: 95%;
-      border-radius: 30px;
-      flex: 0 1 auto;
-      background-color: black;
-      margin-left: 10px;
-    }
-    .progress_video {
-      height: 4px;
-      width: 0%;
-      border-radius: 30px;
-      flex: 0 1 auto;
-      background-color: red;
-      position: relative
+.vp-fullscreen {
+  font-size: 20px; /* масштабируется от базового размера */
+  background: transparent;
+  border: none;
+  color: white;
+  cursor: pointer;
+  font-family: sans-serif;
+  width: 35px;
+  height: 44px;
+}
 
-    }
+.spacer {
+  margin-left: auto;
+}
 
-    .dot {
-    width: 10px;
-    height: 10px;
-    background-color: red;
-    border: 3px solid white;
-    border-radius: 50%;
-    position: absolute; /* заменили fixed */
-    right: 0; /* ставим в конец полоски */
-    top: 50%;
-    transform: translate(50%, -50%);
-    transition: opacity 300ms ease-in-out, transform 300ms ease-in-out;
-    cursor: pointer;
-    opacity: 0;
+.player_time {
+  color: white;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 400;
+}
 
-  }
+.progress_container {
+  height: 4px;
+  width: 95%;
+  border-radius: 30px;
+  flex: 0 1 auto;
+  background-color: black;
+  margin-left: 10px;
+}
 
-    .progress_video:hover .dot{
-      opacity: 1;
-      background-color: blue;
-      transition: opacity 300ms ease-in-out, transform 300ms ease-in-out;
-    }
+.progress_video {
+  height: 4px;
+  width: 0%;
+  border-radius: 30px;
+  flex: 0 1 auto;
+  background-color: red;
+  position: relative
+
+}
+
+.dot {
+  width: 10px;
+  height: 10px;
+  background-color: red;
+  border: 3px solid white;
+  border-radius: 50%;
+  position: absolute; /* заменили fixed */
+  right: 0; /* ставим в конец полоски */
+  top: 50%;
+  transform: translate(50%, -50%);
+  transition: opacity 300ms ease-in-out, transform 300ms ease-in-out;
+  cursor: pointer;
+  opacity: 0;
+
+}
+
+.progress_video:hover .dot {
+  opacity: 1;
+  background-color: red;
+  transition: opacity 300ms ease-in-out, transform 300ms ease-in-out;
+}
+
+.vp-button:focus {
+  outline: none;
+}
