@@ -1,6 +1,6 @@
     .vp-player {
-      width: 800px;
-      height: 600px;
+      width: 794px;
+      height: 601px;
       box-shadow: 0 0 20px rgba(0, 0, 0, 0.8);
       background-color: black;
       position: relative;
@@ -18,19 +18,29 @@
       background: black;
       display: flex;
       align-items: center;
-      gap: 15px;
+      gap: 1px;
     }
 
     .vp-button {
-      font-size: 1.0em; /* масштабируется от базового размера */
+      font-size: 20px;
+      background: transparent;
+      border: none;
+      color: white;
+      cursor: pointer;
+      font-family: sans-serif;
+      width: 36px;
+      height: 41px;
+
+    }
+    .vp-fullscreen {
+      font-size: 20px; /* масштабируется от базового размера */
       background: transparent;
       border: none;
       color: white;
       cursor: pointer;
       font-family: sans-serif;
       width: 35px;
-      height: 35px;
-
+      height: 44px;
     }
     .spacer {
       margin-left: auto;
