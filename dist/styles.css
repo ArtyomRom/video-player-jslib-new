@@ -70,14 +70,23 @@
     }
 
     .dot {
-    width: 12px;
-    height: 12px;
+    width: 10px;
+    height: 10px;
     background-color: red;
-    border: 2px solid white;
+    border: 3px solid white;
     border-radius: 50%;
     position: absolute; /* заменили fixed */
     right: 0; /* ставим в конец полоски */
     top: 50%;
     transform: translate(50%, -50%);
     transition: opacity 300ms ease-in-out, transform 300ms ease-in-out;
+    cursor: pointer;
+    opacity: 0;
+
   }
+
+    .progress_video:hover .dot{
+      opacity: 1;
+      background-color: blue;
+      transition: opacity 300ms ease-in-out, transform 300ms ease-in-out;
+    }
