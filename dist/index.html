@@ -8,6 +8,9 @@
   <script src="https://unpkg.com/playable@2.10.3/dist/statics/playable.bundle.min.js"></script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <link rel="stylesheet" href="styles.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
 </head>
 <body>
 
@@ -26,12 +29,13 @@
     <button class="js-mute-button vp-button" hidden>
       <i class="fa fa-volume-up" aria-hidden="true"></i>
     </button>
-    <div style="color: white;">
-      <span class="js-current-time"></span>
-      —
-      <span class="js-duration"></span>
+    <div>
+      <span class="js-current-time player_time"></span>
     </div>
     <div class="spacer"></div>
+    <div>
+      <span class="js-duration player_time"></span>
+    </div>
     <button class="js-fullscreen-button vp-button">
       <i class="fa fa-expand" aria-hidden="true"></i>
     </button>
