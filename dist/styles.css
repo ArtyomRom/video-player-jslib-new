@@ -10,6 +10,10 @@
   justify-content: space-between;
 }
 
+body {
+  font-size: 80px; /* Это и есть базовый размер шрифта */
+}
+
 .vp-display {
   flex-grow: 1;
 }
@@ -18,7 +22,8 @@
   background: black;
   display: flex;
   align-items: center;
-  gap: 1px;
+  gap: 10px;
+  padding: 10px;
 }
 
 .vp-button {
@@ -30,47 +35,50 @@
   font-family: sans-serif;
   width: 36px;
   height: 41px;
-
-}
-
-.vp-fullscreen {
-  font-size: 20px; /* масштабируется от базового размера */
-  background: transparent;
-  border: none;
-  color: white;
-  cursor: pointer;
-  font-family: sans-serif;
-  width: 35px;
-  height: 44px;
-}
-
-.spacer {
-  margin-left: auto;
 }
 
 .player_time {
   color: white;
   font-family: 'Roboto', sans-serif;
   font-weight: 400;
+  white-space: nowrap; /* чтобы время не ломалось */
+  font-size: 16px;
+}
+
+.progress-block {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-grow: 1;
+  min-width: 0;
+  position: relative;
 }
 
 .progress_container {
-  height: 4px;
-  width: 95%;
-  border-radius: 30px;
-  flex: 0 1 auto;
-  background-color: black;
-  margin-left: 10px;
+  flex-grow: 1;
+  width: 100%;
+  height: 6px;
+  background-color: #ccc;
+  border-radius: 3px;
+  position: relative;
+  overflow: visible;
 }
 
+.js-progress {
+  width: 100%;
+  height: 100%;
+  background-color: black;
+  border-radius: 3px;
+  position: relative;
+}
 .progress_video {
-  height: 4px;
   width: 0%;
-  border-radius: 30px;
-  flex: 0 1 auto;
+  height: 100%;
   background-color: red;
-  position: relative
-
+  position: absolute;
+  left: 0;
+  top: 0;
+  border-radius: 3px; /* Закругление самой полосы прогресса */
 }
 
 .dot {
@@ -79,20 +87,19 @@
   background-color: red;
   border: 3px solid white;
   border-radius: 50%;
-  position: absolute; /* заменили fixed */
-  right: 0; /* ставим в конец полоски */
+  position: absolute;
+  right: 0;
   top: 50%;
-  transform: translate(50%, -50%);
+  transform: translate(50%, -50%) scale(1);
   transition: opacity 300ms ease-in-out, transform 300ms ease-in-out;
   cursor: pointer;
   opacity: 0;
+  z-index: 10;
 
 }
 
 .progress_video:hover .dot {
   opacity: 1;
-  background-color: red;
-  transition: opacity 300ms ease-in-out, transform 300ms ease-in-out;
 }
 
 .vp-button:focus {

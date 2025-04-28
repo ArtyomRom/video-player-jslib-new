@@ -4,16 +4,18 @@
   <meta charset="UTF-8">
   <title>Title</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
   <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
   <script src="https://unpkg.com/playable@2.10.3/dist/statics/playable.bundle.min.js"></script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <link rel="stylesheet" href="styles.css">
+
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
 </head>
 <body>
-
 <div id="player" class="vp-player">
   <div class="js-video-container vp-display"></div>
   <div class="vp-controls">
@@ -23,34 +25,29 @@
     <button class="js-pause-button vp-button" hidden>
       <i class="fa fa-pause" aria-hidden="true"></i>
     </button>
-    <button class="js-volume-button vp-button" hidden="">
+    <button class="js-volume-button vp-button" hidden>
       <i class="fa fa-volume-off" aria-hidden="true"></i>
     </button>
     <button class="js-mute-button vp-button" hidden>
       <i class="fa fa-volume-up" aria-hidden="true"></i>
     </button>
-    <div>
-      <span class="js-current-time player_time"></span>
-    </div>
-    <div class="progress_container">
-      <div class="js-progress" style="background-color: black;">
-        <div class="js-progress-slider progress_video">
-          <span class="dot"></span>
+
+    <div class="progress-block">
+      <span class="js-current-time player_time">00:00</span>
+      <div class="progress_container">
+        <div class="js-progress">
+          <div class="js-progress-slider progress_video">
+            <span class="dot"></span>
+          </div>
         </div>
       </div>
-    </div>
-    <div class="spacer"></div>
-    <div>
-      <span class="js-duration player_time"></span>
-
+      <span class="js-duration player_time">00:00</span>
     </div>
 
     <button class="js-fullscreen-button vp-button">
       <i class="fa fa-expand" aria-hidden="true"></i>
     </button>
   </div>
-
-
 </div>
 
 <script src="player.js"></script>
